@@ -1,0 +1,160 @@
+@use './helpers/variables' as *;
+@use './helpers/extends/extends' as *;
+
+.section.section_header {
+	background-image: url(../imgs/header/main_bg.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+.header__w {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo__icon {
+	display: block;
+	width: 26rem;
+	height: 3.5rem;
+	flex-shrink: 0;
+}
+
+.logo__icon_img {
+	@extend %contain_img;
+}
+
+.phone_navigation__w {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 8rem;
+}
+
+.phone {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 1.5rem;
+}
+
+.phone__icon {
+	display: block;
+	width: 2.6rem;
+	height: 2.6rem;
+	flex-shrink: 0;
+}
+
+.phone__icon_img {
+	@extend %contain_img;
+}
+
+.phone__number {
+	font-family: $font_1;
+	font-size: 2.4rem;
+	font-weight: 600;
+	line-height: 1.26;
+	text-align: right;
+	text-decoration: none;
+	color: $color_title_2;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 1.5rem;
+}
+
+.menu__text {
+	font-size: 2.4rem;
+	font-weight: 600;
+	line-height: 1.26;
+	text-align: right;
+	color: $color_title_2;
+}
+
+// burger_menu---------------
+
+.nav {
+	position: fixed;
+	z-index: 998;
+
+	top: 0;
+	left: 0;
+	width: 100dvw;
+	height: 100dvh;
+	background-color: #818fa6;
+	display: flex;
+
+	transition: all 0.3s ease-in-out;
+	overflow: auto;
+
+	transform: translateX(-100dvw);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.nav.active {
+	transform: translateX(0);
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.nav_close {
+	display: block;
+	position: absolute;
+	z-index: 999;
+	top: 6.8rem;
+	left: 2rem;
+
+	height: 5rem;
+	width: 5rem;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-image: url(../imgs/header/nav_cross.svg);
+	border: none;
+
+	cursor: pointer;
+}
+
+.nav__list {
+	display: flex;
+	flex-direction: column;
+	padding: 4rem;
+	align-items: center;
+	row-gap: 3rem;
+	margin: auto;
+	text-align: center;
+}
+
+.nav__link {
+	font-size: 2.3rem;
+}
+
+.menu_button {
+	display: block;
+
+	width: 4rem;
+	height: 3rem;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-image: url(../imgs/header/burger_menu.svg);
+	border: none;
+
+	cursor: pointer;
+}
+
+.body.body--overflow_hidden {
+	overflow: hidden;
+}
+
+// burger_menu###############
