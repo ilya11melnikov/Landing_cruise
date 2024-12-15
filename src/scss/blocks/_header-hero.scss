@@ -1,18 +1,13 @@
 @use './helpers/variables' as *;
 @use './helpers/extends/extends' as *;
 
-.section.section_header {
-	background-image: url(../imgs/header/main_bg.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
-}
+// header-------------------
 
 .header__w {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom: 18.2rem;
 }
 
 .logo__icon {
@@ -58,7 +53,7 @@
 	line-height: 1.26;
 	text-align: right;
 	text-decoration: none;
-	color: $color_title_2;
+	color: $color_white;
 }
 
 .menu {
@@ -73,7 +68,7 @@
 	font-weight: 600;
 	line-height: 1.26;
 	text-align: right;
-	color: $color_title_2;
+	color: $color_white;
 }
 
 // burger_menu---------------
@@ -158,3 +153,110 @@
 }
 
 // burger_menu###############
+
+// header####################
+
+// hero----------------------
+
+.hero__title {
+	font-family: $font_3;
+	font-size: 6.4rem;
+	font-weight: 700;
+	line-height: 1.4;
+	letter-spacing: 0.02em;
+
+	color: $color_white;
+	margin-bottom: 3.5rem;
+}
+
+.hero__descr {
+	font-family: $font_1;
+	font-size: 2.6rem;
+	font-weight: 300;
+	line-height: 1.54;
+
+	color: $color_white;
+	margin-bottom: 11.7rem;
+
+	& span:nth-of-type(1) {
+		font-weight: 800;
+		color: $color_accent;
+	}
+	& span:nth-of-type(2) {
+		font-weight: 600;
+		color: $color_accent;
+	}
+}
+
+.hero__btns {
+	display: flex;
+	column-gap: 4rem;
+	margin-bottom: 5rem;
+}
+
+.discount_data_w {
+	display: flex;
+	align-items: center;
+	column-gap: 11.4rem;
+}
+
+.discount_data {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 2rem;
+}
+
+.discount_data__icon {
+	display: block;
+	width: 5.5rem;
+	height: 5.5rem;
+	flex-shrink: 0;
+}
+
+.discount_data__icon_img {
+	@extend %contain_img;
+}
+
+.discount__data_text_w {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.discount__text {
+	font-family: $font_1;
+	font-size: 2.2rem;
+	font-weight: 600;
+	line-height: 1.27;
+	letter-spacing: 0.04em;
+	color: $color_white;
+	margin-bottom: 0.5rem;
+
+	& span:nth-of-type(1) {
+		font-weight: 700;
+	}
+}
+
+.data__text {
+	font-family: $font_1;
+	font-size: 2.2rem;
+	font-weight: 700;
+	line-height: 1.27;
+	letter-spacing: 0.04em;
+	color: $color_white;
+	margin-bottom: 0.5rem;
+
+	& span:nth-of-type(1) {
+		font-weight: 600;
+	}
+}
+
+.discount_data__descr {
+	font-family: $font_1;
+	font-size: 1.8rem;
+	line-height: 1.26;
+	color: $color_white;
+}
+
+// hero######################

@@ -1,0 +1,105 @@
+@use './helpers/variables' as *;
+@use './helpers/extends/extends' as *;
+
+.intresting__swiper {
+	position: relative;
+}
+
+.swiperClass {
+	overflow: hidden;
+}
+
+.block__item_w {
+	background-color: $color_white;
+	box-shadow: 0 1rem 2rem 0 #0730551a;
+	max-width: 38rem;
+	border-radius: 1.2rem;
+	margin: 0 0 2rem 1rem;
+}
+
+.block__item_photo {
+	display: block;
+	width: 38rem;
+	height: 28.9rem;
+
+	flex-shrink: 0;
+	margin-bottom: 2rem;
+}
+
+.block__item_img {
+	@extend %cover_img;
+	border-radius: 1.2rem 1.2rem 0 0;
+}
+
+.block__item_info {
+	padding-left: 2rem;
+
+	// height: 13.8rem;
+}
+
+.block__item_text {
+	font-family: $font_1;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.5;
+	color: $color_title;
+	margin-bottom: 1rem;
+}
+
+.block__item_text_2 {
+	font-family: $font_1;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.5;
+	color: $color_title;
+	margin-bottom: 4rem;
+}
+
+.block__item_city {
+	display: flex;
+	align-items: center;
+	column-gap: 1rem;
+	padding-bottom: 2.5rem;
+}
+
+.block__item_city_icon {
+	display: block;
+	width: 18px;
+	height: 18px;
+	flex-shrink: 0;
+}
+
+.block__item_city_icon_img {
+	@extend %contain_img;
+}
+
+.block__item_city_name {
+	font-family: $font_1;
+	font-size: 1.8rem;
+	font-weight: 400;
+	line-height: 1.26;
+	color: $color_title;
+}
+
+.block__nav {
+    position: absolute;
+    display: block;
+    top: 15.6rem;
+    width: 5.4rem;
+    height: 5.4rem;
+    flex-shrink: 0;
+
+    &.btn_prev {
+        left: -9.3rem;
+		rotate: 180deg;
+    }
+
+    &.btn_next {
+        right: -9.3rem;
+    }
+}
+
+.btn_next,
+.btn_prev {
+	@extend %contain_img;
+}

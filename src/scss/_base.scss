@@ -27,8 +27,28 @@ body {
 }
 
 .section {
-	padding: 4rem 0;
+	padding: 8rem 0;
 	width: 100%;
+
+	
+	&.section--about {
+		background-color: #f9f9fb;
+		padding: 4rem 0 8rem 0;
+	}
+
+	&.section--header {
+		padding: 4rem 0 0 0;
+		position: relative;
+		background: 
+		radial-gradient(50% 50% at 50% 50%, rgba(7, 28, 85, 0.2) 66.15%, rgba(7, 28, 85, 0.4) 100%), 
+		url(../imgs/header/main_bg.jpg);
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100vh;
+		margin-bottom: -16.9rem;
+		z-index: 5;
+	}
 }
 
 .container {
@@ -39,3 +59,12 @@ body {
 	margin: 0 auto;
 }
 
+.main_title {
+	font-family: $font_3;
+	font-size: 4.8rem;
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	text-align: center;
+	margin-bottom: 6rem;
+}
