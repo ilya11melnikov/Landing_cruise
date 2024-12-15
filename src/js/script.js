@@ -31,7 +31,6 @@ const swiperThree = new Swiper('.swiperClass', {
 		nextEl: '.btn_next',
 		prevEl: '.btn_prev',
 	},
-	mousewheel: true,
 	keyboard: true,
 
 	breakpoints: {
@@ -51,4 +50,92 @@ const swiperThree = new Swiper('.swiperClass', {
 			slidesPerView: 4,
 		},
 	},
+});
+
+const counters = [
+	{ value: 1, display: document.getElementById('counter-value') },
+	{ value: 1, display: document.getElementById('counter-value_2') }
+  ];
+  
+  const buttons = [
+	{ decrement: document.querySelectorAll('.counter-btn')[0], increment: document.querySelectorAll('.counter-btn')[1] },
+	{ decrement: document.querySelectorAll('.counter-btn_2')[0], increment: document.querySelectorAll('.counter-btn_2')[1] }
+  ];
+  
+  // Функция для обновления счетчика
+  function updateCounter(counter, change) {
+	counter.value = Math.max(0, Math.min(9, counter.value + change)); // Ограничение от 0 до 9
+	counter.display.textContent = counter.value;
+  }
+  
+  // Привязываем события к кнопкам
+  buttons.forEach((btn, index) => {
+	btn.decrement.addEventListener('click', event => {
+	  event.preventDefault();
+	  updateCounter(counters[index], -1);
+	});
+  
+	btn.increment.addEventListener('click', event => {
+	  event.preventDefault();
+	  updateCounter(counters[index], 1);
+	});
+  });
+  
+  
+
+const dateInput = document.querySelector('.form__date_input');
+
+// Получаем текущую дату
+const today = new Date();
+const formattedDate = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+dateInput.value = formattedDate;
+
+dateInput.addEventListener('input', function (e) {
+	// Получаем текущее значение и позицию курсора
+	let value = e.target.value;
+	let cursorPosition = e.target.selectionStart;
+
+	// Удаляем все, кроме цифр
+	value = value.replace(/[^\d]/g, '');
+
+	// Если длина больше 8, обрезаем
+	if (value.length > 8) {
+		value = value.slice(0, 8);
+	}
+
+	// Форматируем дату, вставляя дефисы
+	let formattedValue = '';
+	for (let i = 0; i < value.length; i++) {
+		if (i === 4 || i === 6) {
+			formattedValue += '-';
+		}
+		formattedValue += value[i];
+	}
+
+	// Устанавливаем отформатированное значение
+	e.target.value = formattedValue;
+
+	// Корректируем позицию курсора
+	let newCursorPosition = cursorPosition;
+	if (cursorPosition === 4 || cursorPosition === 7) {
+		newCursorPosition++;
+	}
+	e.target.setSelectionRange(newCursorPosition, newCursorPosition);
+});
+
+// Валидация даты при потере фокуса
+dateInput.addEventListener('blur', function (e) {
+	const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+	if (!datePattern.test(e.target.value)) {
+		e.target.value = formattedDate;
+	}
+});
+
+
+
+const selectWrapper = document.querySelector('.form__select_w');
+const select = document.querySelector('.form__select');
+
+selectWrapper.addEventListener('click', () => {
+	selectWrapper.classList.toggle('open');
 });
