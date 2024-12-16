@@ -16,7 +16,7 @@ menuCloseButton.addEventListener('click', function () {
 	cards.classList.remove('about__cards--display_none');
 });
 
-const swiperThree = new Swiper('.swiperClass', {
+const swiperOne = new Swiper('.swiperClass', {
 	loop: true,
 	slidesPerView: 4,
 	autoplay: {
@@ -51,6 +51,108 @@ const swiperThree = new Swiper('.swiperClass', {
 		},
 	},
 });
+
+const swiperTwo = new Swiper('.swiperClass_2', {
+	loop: true,
+	slidesPerView: 3,
+	autoplay: {
+		delay: 2000,
+		disableOnInteraction: false,
+	},
+	spaceBetween: 30,
+	loopFillGroupWithBlank: true,
+	slidesPerGroup: 1,
+	speed: 1000,
+
+	navigation: {
+		nextEl: '.btn_next_gallery',
+		prevEl: '.btn_prev_gallery',
+	},
+	keyboard: true,
+
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+
+		480: {
+			slidesPerView: 2,
+		},
+
+		780: {
+			slidesPerView: 3,
+		},
+
+		1024: {
+			slidesPerView: 4,
+		},
+	},
+});
+
+const swiperThree = new Swiper('.swiperClass_3', {
+	loop: true,
+	slidesPerView: 4,
+	autoplay: {
+		delay: 2000,
+		disableOnInteraction: false,
+	},
+	spaceBetween: 30,
+	loopFillGroupWithBlank: true,
+	slidesPerGroup: 1,
+	speed: 1000,
+
+	navigation: {
+		nextEl: '.btn_next_gallery',
+		prevEl: '.btn_prev_gallery',
+	},
+	keyboard: true,
+
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+
+		480: {
+			slidesPerView: 2,
+		},
+
+		780: {
+			slidesPerView: 3,
+		},
+
+		1024: {
+			slidesPerView: 4,
+		},
+	},
+});
+
+
+// Получаем элемент прогресс-бара
+const progressBar = document.querySelector('.slider-progress-bar');
+
+// Функция обновления прогресс-бара
+function updateProgressBar(swiperInstance) {
+	const totalSlides = swiperInstance.slides.length - swiperInstance.loopedSlides * 2; // Без дублированных слайдов
+	const currentIndex = swiperInstance.realIndex; // Индекс текущего слайда
+	const step = 405 / (totalSlides - 1); // Шаг перемещения в %
+
+	// Перемещение прогресс-бара
+	progressBar.style.transform = `translateX(${currentIndex * step}%)`;
+}
+
+// Подключаем прогресс-бар к первому слайдеру
+swiperTwo.on('slideChange', () => updateProgressBar(swiperTwo));
+swiperTwo.on('init', () => updateProgressBar(swiperTwo));
+
+// Подключаем прогресс-бар ко второму слайдеру
+swiperThree.on('slideChange', () => updateProgressBar(swiperThree));
+swiperThree.on('init', () => updateProgressBar(swiperThree));
+
+// Инициализируем слайдеры
+swiperTwo.init();
+swiperThree.init();
+
+
 
 const counters = [
 	{ value: 1, display: document.getElementById('counter-value') },

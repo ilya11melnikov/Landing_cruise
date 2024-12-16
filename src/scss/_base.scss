@@ -30,7 +30,6 @@ body {
 	padding: 8rem 0;
 	width: 100%;
 
-	
 	&.section--about {
 		background-color: #f9f9fb;
 		padding: 4rem 0 8rem 0;
@@ -39,9 +38,8 @@ body {
 	&.section--header {
 		padding: 4rem 0 0 0;
 		position: relative;
-		background: 
-		radial-gradient(50% 50% at 50% 50%, rgba(7, 28, 85, 0.2) 66.15%, rgba(7, 28, 85, 0.4) 100%), 
-		url(../imgs/header/main_bg.jpg);
+		background: radial-gradient(50% 50% at 50% 50%, rgba(7, 28, 85, 0.2) 66.15%, rgba(7, 28, 85, 0.4) 100%),
+			url(../imgs/header/main_bg.jpg);
 		background-position: center top;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -58,7 +56,7 @@ body {
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 41.5rem;
-		margin-bottom: 10rem;
+		margin-bottom: 8rem;
 		z-index: 5;
 	}
 }
@@ -69,6 +67,11 @@ body {
 	width: 100%;
 
 	margin: 0 auto;
+
+	&.container--gallery {
+		padding: 0 0;
+		max-width: 192rem;
+	}
 }
 
 .main_title {
@@ -79,5 +82,9 @@ body {
 	letter-spacing: 0.02em;
 	text-align: center;
 	margin-bottom: 6rem;
-	color: $color_white;
+	color: $color_title;
+
+	&--form {
+		color: $color_white;
+	}
 }
