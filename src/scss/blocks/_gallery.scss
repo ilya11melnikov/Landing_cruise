@@ -1,0 +1,64 @@
+@use './helpers/variables' as *;
+@use './helpers/extends/extends' as *;
+
+.gallery {
+	margin-right: -51rem;
+}
+
+.gallery__swiper_1 {
+	margin-bottom: 3rem;
+	transform: translateX(-115px);
+}
+
+.gallery__swiper_2 {
+	margin-bottom: 3rem;
+	transform: translateX(-273px);
+}
+
+.gallery__photo {
+	display: block;
+	width: 58rem;
+	height: 40rem;
+	flex-shrink: 0;
+}
+
+.gallery__img {
+	@extend %cover_img;
+	border-radius: 1.2rem;
+}
+
+.block_nav_w {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6rem;
+}
+
+.block_gallery {
+	display: block;
+	width: 54px;
+	height: 54px;
+	flex-shrink: 0;
+	cursor: pointer;
+
+    &--prev {
+        rotate: 180deg;
+    }
+}
+
+.slider-progress {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 4px;
+	background-color: rgba(7, 28, 85, 0.2);
+  }
+
+.slider-progress-bar {
+	position: absolute;
+	height: 100%;
+	width: 15%; 
+	background-color: #6A7799; 
+	transition: transform .3s ease; 
+}

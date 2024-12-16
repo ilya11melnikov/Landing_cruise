@@ -90,6 +90,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	font-weight: 800;
 	line-height: 1.26;
 	color: $color_title;
+	cursor: pointer;
 }
 
 .counter-btn_2 {
@@ -98,6 +99,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	font-weight: 800;
 	line-height: 1.26;
 	color: $color_title;
+	cursor: pointer;
 }
 
 .counter-value {
