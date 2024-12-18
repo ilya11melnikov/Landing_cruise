@@ -59,6 +59,21 @@ body {
 		margin-bottom: 8rem;
 		z-index: 5;
 	}
+	
+	&.section--question {
+		padding: 8rem 0;
+		position: relative;
+		background-image: url(../imgs/form/form_bg.jpg);
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 85.4rem;
+		z-index: 5;
+	}
+
+	&.section--footer {
+		padding: 7rem 0;
+	}
 }
 
 .container {
@@ -70,6 +85,11 @@ body {
 
 	&.container--gallery {
 		padding: 0 0;
+		max-width: 192rem;
+	}
+
+	&.container--footer {
+		padding: 0 7rem;
 		max-width: 192rem;
 	}
 }
@@ -87,4 +107,8 @@ body {
 	&--form {
 		color: $color_white;
 	}
+}
+
+.logo.logo--footer {
+	margin-bottom: 4rem;
 }
