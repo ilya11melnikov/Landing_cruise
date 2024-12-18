@@ -1,0 +1,7 @@
+@use './helpers/variables' as *;
+@use './helpers/extends/extends' as *;
+
+.footer {
+	background-color: #12161f;
+	height: 35rem;
+}
