@@ -54,6 +54,11 @@
 	text-align: right;
 	text-decoration: none;
 	color: $color_white;
+	transition: all .3s ease-in-out;
+
+	&:hover {
+		color: $color_accent;
+	}
 }
 
 .menu {

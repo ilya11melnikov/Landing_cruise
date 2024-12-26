@@ -36,14 +36,19 @@
 
 .block_gallery {
 	display: block;
-	width: 54px;
-	height: 54px;
+	width: 5.4rem;
+	height: 5.4rem;
 	flex-shrink: 0;
 	cursor: pointer;
 
     &--prev {
         rotate: 180deg;
     }
+}
+
+.btn_prev_gallery,
+.btn_next_gallery {
+	@extend %contain_img;
 }
 
 .slider-progress {

@@ -262,3 +262,25 @@ function accordion(accordionBlockSelector) {
 }
 
 accordion('.accordionTest');
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+	Fancybox.bind('[data-fancybox="gallery"]', {
+		infinite: true,
+		keyboard: {
+			Escape: 'close',
+			Delete: 'close',
+		},
+		Thumbs: {
+			autoStart: true,
+		},
+		Toolbar: {
+			display: ['zoom', 'slideShow', 'fullscreen', 'download', 'thumbs', 'close'],
+		},
+		animationEffect: 'zoom',
+		captions: function (fancybox, carousel, slide) {
+			return slide.$trigger.dataset.caption || '';
+		},
+	});
+});

@@ -222,9 +222,10 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	column-gap: 1.2rem;
 }
 
-#check_1 {
+.check_1 {
 	width: 1.6rem;
 	height: 1.6rem;
+	cursor: pointer;
 }
 
 .form__checkbox_text {
