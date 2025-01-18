@@ -1,30 +1,8 @@
 @use './helpers/abstracts' as *;
 
 html {
-	// font-size: calc(100dvw / 1920 * 10);
+	font-size: 10px;
 
-	
-	
-	// @include bp(1800px) {
-	// 	font-size: 8px;
-	// }
-
-	// @include bp(1500px) {
-	// 	font-size: 7px;
-	// }
-	
-	// @include bp(1320px) {
-	// 	font-size: 6px;
-	// }
-
-	// @include bp(1150px) {
-	// 	font-size: 5px;
-	// }
-
-	
-	@media (min-width: 1799.98px){
-		font-size: 10px;
-	}
 	@media (min-width: 1499.98px) and (max-width: 1799.98px) {
 		font-size: 8px;
 	}
@@ -37,8 +15,6 @@ html {
 	@media (min-width: 1023.98px) and (max-width: 1149.98px) {
 		font-size: 5px;
 	}
-	
-	
 }
 
 html,
@@ -94,7 +70,7 @@ body {
 		margin-bottom: 8rem;
 		z-index: 5;
 	}
-	
+
 	&.section--question {
 		padding: 8rem 0;
 		position: relative;
