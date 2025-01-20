@@ -17,9 +17,21 @@
 
 .gallery__photo {
 	display: block;
-	width: 58rem;
-	height: 40rem;
+
 	flex-shrink: 0;
+
+	
+	@media (min-width: $point_2) {
+		width: 58rem;
+		height: 40rem;
+	}
+	
+
+	@media (min-width: $point_4) and (max-width: $point_3) {
+		width: 43rem;
+		height: 29.6rem;
+	}
+	
 }
 
 .gallery__img {
