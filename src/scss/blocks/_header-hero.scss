@@ -150,7 +150,7 @@
 	left: 0;
 	width: 100dvw;
 	height: 100dvh;
-	background-color: #818fa6;
+	background-color: $color_accent;
 	display: flex;
 
 	transition: all 0.3s ease-in-out;
@@ -199,7 +199,9 @@
 }
 
 .nav__link {
-	font-size: 2.3rem;
+	font-size: 3.3rem;
+    color: $color_white;
+    text-decoration: none;
 }
 
 .menu_button {
