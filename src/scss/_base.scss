@@ -69,8 +69,6 @@ body {
 		height: 41.5rem;
 		z-index: 5;
 		margin-bottom: -30rem;
-		
-	
 	}
 
 	&.section--question {
@@ -102,8 +100,15 @@ body {
 	}
 
 	&.container--footer {
-		padding: 0 7rem;
 		max-width: 192rem;
+
+		@media (min-width: $point_2) {
+			padding: 0 7rem;
+		}
+
+		@media (max-width: $point_3) {
+			padding: 0 7rem;
+		}
 	}
 }
 
@@ -131,4 +136,10 @@ body {
 
 .logo.logo--footer {
 	margin-bottom: 4rem;
+
+	@media (max-width: $point_3) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
