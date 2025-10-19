@@ -3,6 +3,12 @@
 
 // header-------------------
 
+.hero-header {
+	@media (min-width: $point_4) {
+		margin-bottom: -16.9rem;
+	}
+}
+
 .header__w {
 	display: flex;
 	align-items: center;
@@ -200,8 +206,8 @@
 
 .nav__link {
 	font-size: 3.3rem;
-    color: $color_white;
-    text-decoration: none;
+	color: $color_white;
+	text-decoration: none;
 }
 
 .menu_button {
