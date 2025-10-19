@@ -32,29 +32,11 @@ const swiperOne = new Swiper('.swiperClass', {
 		prevEl: '.btn_prev',
 	},
 	keyboard: true,
-
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
-		},
-
-		480: {
-			slidesPerView: 2,
-		},
-
-		780: {
-			slidesPerView: 3,
-		},
-
-		1024: {
-			slidesPerView: 4,
-		},
-	},
 });
 
 const swiperTwo = new Swiper('.swiperClass_2', {
 	loop: true,
-	slidesPerView: 3,
+	slidesPerView: 4,
 	autoplay: {
 		delay: 2000,
 		disableOnInteraction: false,
@@ -69,24 +51,6 @@ const swiperTwo = new Swiper('.swiperClass_2', {
 		prevEl: '.btn_prev_gallery',
 	},
 	keyboard: true,
-
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
-		},
-
-		480: {
-			slidesPerView: 2,
-		},
-
-		780: {
-			slidesPerView: 3,
-		},
-
-		1024: {
-			slidesPerView: 4,
-		},
-	},
 });
 
 const swiperThree = new Swiper('.swiperClass_3', {
@@ -106,24 +70,6 @@ const swiperThree = new Swiper('.swiperClass_3', {
 		prevEl: '.btn_prev_gallery',
 	},
 	keyboard: true,
-
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
-		},
-
-		480: {
-			slidesPerView: 2,
-		},
-
-		780: {
-			slidesPerView: 3,
-		},
-
-		1024: {
-			slidesPerView: 4,
-		},
-	},
 });
 
 
@@ -262,3 +208,34 @@ function accordion(accordionBlockSelector) {
 }
 
 accordion('.accordionTest');
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+	Fancybox.bind('[data-fancybox="gallery"]', {
+		infinite: true,
+		keyboard: {
+			Escape: 'close',
+			Delete: 'close',
+		},
+		Thumbs: {
+			autoStart: true,
+		},
+		Toolbar: {
+			display: ['zoom', 'slideShow', 'fullscreen', 'download', 'thumbs', 'close'],
+		},
+		animationEffect: 'zoom',
+		captions: function (fancybox, carousel, slide) {
+			return slide.$trigger.dataset.caption || '';
+		},
+	});
+});
+
+
+function setVH() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+window.addEventListener('resize', setVH);
+setVH();

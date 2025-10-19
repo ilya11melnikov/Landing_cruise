@@ -1,5 +1,62 @@
 <section class="section section--gallery">
 	<div class="container container--gallery">
+		<form class="form">
+			<div class="form__top">
+				<div class="form__block">
+					<div class="form__text">Дата отправления</div>
+					<input type="date" class="form__date_input" />
+				</div>
+				<div class="form__block">
+					<div class="form__text_people">Кол-во взрослых</div>
+					<div class="form__counter">
+						<button class="counter-btn">-</button>
+						<span class="counter-value" id="counter-value">1</span>
+						<button class="counter-btn">+</button>
+					</div>
+				</div>
+				<div class="form__block">
+					<div class="form__text_people">Кол-во детей</div>
+					<div class="form__counter">
+						<button class="counter-btn_2">-</button>
+						<span class="counter-value" id="counter-value_2">1</span>
+						<button class="counter-btn_2">+</button>
+					</div>
+				</div>
+				<div class="form__block">
+					<div class="form__text">Категория каюты</div>
+					<div class="form__select_w">
+						<select class="form__select" name="" id="">
+							<option class="form__select_option" value="">стандарт</option>
+							<option class="form__select_option" value="">полулюкс</option>
+							<option class="form__select_option" value="">люкс</option>
+						</select>
+					</div>
+				</div>
+				<div class="form__button">
+					<button type="submit" class="btn_2">Забронировать</button>
+				</div>
+			</div>
+			<div class="form__bottom">
+				<div class="form__bottom_info">
+					<div class="form__text">Дополнительные услуги</div>
+					<a class="form__sub_text">Информация о каютах</a>
+				</div>
+				<div class="form__checkboxs">
+					<div class="form__checkbox">
+						<input placeholder="enter checkbox" class="check_1" type="checkbox" />
+						<label class="form__checkbox_text" for="check_1">трансфер</label>
+					</div>
+					<div class="form__checkbox">
+						<input placeholder="enter checkbox" class="check_1" type="checkbox" />
+						<label class="form__checkbox_text" for="check_1">каюта с видом</label>
+					</div>
+					<div class="form__checkbox">
+						<input placeholder="enter checkbox" class="check_1" type="checkbox" />
+						<label class="form__checkbox_text" for="check_1">авиабилеты до Одессы</label>
+					</div>
+				</div>
+			</div>
+		</form>
 		<div class="main_title">Путешествуйте вместе c нами!</div>
 		<div class="gallery">
 			<div class="gallery__swiper_1">
@@ -7,42 +64,61 @@
 					<div class="swiper-wrapper">
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_1.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_1.jpg" class="img_w" loading="lazy" data-fancybox="gallery" data-caption="table">
+									<img src="./imgs/gallery/gallery_1.jpg" alt="" loading="lazy" class="gallery__img" />
+								</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_2.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_2.jpg" class="img_w" loading="lazy" data-fancybox="gallery" data-caption="table">
+									<img src="./imgs/gallery/gallery_2.jpg" alt="" loading="lazy" class="gallery__img" />
+								</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_3.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_3.jpg" class="img_w" loading="lazy" data-fancybox="gallery" data-caption="table">
+									<img src="./imgs/gallery/gallery_3.jpg" alt="" loading="lazy" class="gallery__img" />
+								</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_4.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_4.jpg" class="img_w" loading="lazy" data-fancybox="gallery"
+                        data-caption="table">
+								<img src="./imgs/gallery/gallery_4.jpg" alt="" loading="lazy" class="gallery__img" />
+							</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_1.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_1.jpg" class="img_w" loading="lazy" data-fancybox="gallery"
+                        data-caption="table">
+								<img src="./imgs/gallery/gallery_1.jpg" alt="" loading="lazy" class="gallery__img" />
+							</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_2.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_2.jpg" class="img_w" loading="lazy" data-fancybox="gallery" data-caption="table">
+									<img src="./imgs/gallery/gallery_2.jpg" alt="" loading="lazy" class="gallery__img" />
+								</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_3.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_3.jpg" class="img_w" loading="lazy" data-fancybox="gallery" data-caption="table">
+									<img src="./imgs/gallery/gallery_3.jpg" alt="" loading="lazy" class="gallery__img" />
+								</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_4.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_4.jpg" class="img_w" loading="lazy" data-fancybox="gallery"
+                        data-caption="table">
+								<img src="./imgs/gallery/gallery_4.jpg" alt="" loading="lazy" class="gallery__img" />
+							</a>
 							</div>
 						</div>
 					</div>
@@ -53,42 +129,66 @@
 					<div class="swiper-wrapper">
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_5.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_5.jpg" class="img_w" loading="lazy" data-fancybox="gallery"
+                        data-caption="table">
+								<img src="./imgs/gallery/gallery_5.jpg" alt="" loading="lazy" class="gallery__img" />
+							</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_6.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_6.jpg" class="img_w" loading="lazy" data-fancybox="gallery"
+                        data-caption="table">
+								<img src="./imgs/gallery/gallery_6.jpg" alt="" loading="lazy" class="gallery__img" />
+							</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_7.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_7.jpg" class="img_w" loading="lazy" data-fancybox="gallery"
+                        data-caption="table">
+								<img src="./imgs/gallery/gallery_7.jpg" alt="" loading="lazy" class="gallery__img" />
+							</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_8.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_8.jpg" class="img_w" loading="lazy" data-fancybox="gallery"
+                        data-caption="table">
+								<img src="./imgs/gallery/gallery_8.jpg" alt="" loading="lazy" class="gallery__img" />
+							</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_5.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_5.jpg" class="img_w" loading="lazy" data-fancybox="gallery"
+                        data-caption="table">
+								<img src="./imgs/gallery/gallery_5.jpg" alt="" loading="lazy" class="gallery__img" />
+							</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_6.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_6.jpg" class="img_w" loading="lazy" data-fancybox="gallery"
+                        data-caption="table">
+								<img src="./imgs/gallery/gallery_6.jpg" alt="" loading="lazy" class="gallery__img" />
+							</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_7.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_7.jpg" class="img_w" loading="lazy" data-fancybox="gallery"
+                        data-caption="table">
+								<img src="./imgs/gallery/gallery_7.jpg" alt="" loading="lazy" class="gallery__img" />
+							</a>
 							</div>
 						</div>
 						<div class="block__item swiper-slide">
 							<div class="gallery__photo">
-								<img src="./imgs/gallery/gallery_8.jpg" alt="" class="gallery__img" />
+								<a href="./imgs/gallery/gallery_8.jpg" loading="lazy" class="img_w" data-fancybox="gallery"
+                        data-caption="table">
+								<img src="./imgs/gallery/gallery_8.jpg" alt="" loading="lazy" class="gallery__img" />
+							</a>
 							</div>
 						</div>
 					</div>
@@ -97,13 +197,13 @@
 		</div>
 		<div class="block_nav_w">
 			<div class="block_gallery block_gallery--prev">
-				<img src="./imgs/intresting/arrow.svg" class="btn_prev_gallery" />
+				<img src="./imgs/intresting/arrow.svg" loading="lazy" class="btn_prev_gallery" />
 			</div>
 			<div class="slider-progress">
 				<div class="slider-progress-bar"></div>
-			  </div>
-			<div class="block_gallery">
-				<img src="./imgs/intresting/arrow.svg" class="btn_next_gallery" />
+			</div>
+			<div class="block_gallery block_gallery--next">
+				<img src="./imgs/intresting/arrow.svg" loading="lazy" class="btn_next_gallery" />
 			</div>
 		</div>
 	</div>

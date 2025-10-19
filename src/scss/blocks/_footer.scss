@@ -3,13 +3,19 @@
 
 .footer {
 	background-color: #12161f;
-	height: 35rem;
+	height: auto;
 }
 
 .footer__w {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	
+	@media (max-width: $point_3) {
+		flex-direction: column;
+	}
+	
 }
 
 .footer__socials {
@@ -17,6 +23,10 @@
 	align-items: center;
 	column-gap: 3rem;
 	margin-bottom: 5.8rem;
+
+	@media (max-width: $point_3) {
+		justify-content: center;
+	}
 }
 
 .footer__socials_icon {
@@ -36,6 +46,17 @@
 	line-height: 1.5;
 	letter-spacing: 0.04em;
 	color: rgba(255, 255, 255, 0.7);
+
+	@media (max-width: $point_3) {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+}
+
+.footer__row {
+	@media (max-width: $point_3) {
+		text-align: center;
+	}
 }
 
 .footer__row_title {
@@ -53,6 +74,20 @@
 	font-weight: 400;
 	line-height: 1.26;
 	color: rgba(255, 255, 255, 0.75);
+
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+
+	@media (max-width: $point_3) {
+		text-align: center;
+	}
+
+	&:hover {
+		color: $color_accent;
+	}
+}
+
+.footer__row_text_w {
 	margin-bottom: 2.5rem;
 }
 
@@ -63,6 +98,11 @@
 	line-height: 1.26;
 	color: rgba(255, 255, 255, 0.85);
 	text-decoration: none;
+	transition: all .3s ease-in-out;
+
+	&:hover {
+		color: $color_accent;
+	}
 }
 
 .footer__row_photo {
@@ -70,6 +110,10 @@
 	align-items: center;
 	column-gap: 1.5rem;
 	margin-bottom: 2.2rem;
+
+	@media (max-width: $point_3) {
+		justify-content: center;
+	}
 }
 
 .footer__row_photo_icon {
@@ -94,4 +138,10 @@
 	color: rgba(255, 255, 255, 0.85);
 	padding-left: 4rem;
 	text-decoration: none;
+
+	transition: all .3s ease-in-out;
+
+	&:hover {
+		color: $color_accent;
+	}
 }

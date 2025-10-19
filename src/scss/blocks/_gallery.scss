@@ -7,19 +7,60 @@
 
 .gallery__swiper_1 {
 	margin-bottom: 3rem;
-	transform: translateX(-115px);
+
+	@media (min-width: $point_4) {
+		transform: translateX(-115px);
+	}
+
+	@media (max-width: $point_5) {
+		transform: translateX(80px);
+	}
+
+	@media (max-width: $point_5) {
+		transform: translateX(12px);
+	}
 }
 
 .gallery__swiper_2 {
 	margin-bottom: 3rem;
-	transform: translateX(-273px);
+
+	@media (min-width: $point_4) {
+		transform: translateX(-273px);
+	}
+
+	@media (max-width: $point_5) {
+		transform: translateX(80px);
+	}
+
+	@media (max-width: $point_6) {
+		transform: translateX(120px);
+	}
 }
 
 .gallery__photo {
 	display: block;
-	width: 58rem;
-	height: 40rem;
+
 	flex-shrink: 0;
+
+	@media (min-width: $point_2) {
+		width: 58rem;
+		height: 40rem;
+	}
+
+	@media (min-width: $point_4) and (max-width: $point_3) {
+		width: 31rem;
+		height: 20.6rem;
+	}
+
+	@media (min-width: $point_6) and (max-width: $point_5) {
+		width: 24rem;
+		height: 14.6rem;
+	}
+
+	@media (max-width: $point_6) {
+		width: 22rem;
+		height: 12.6rem;
+	}
 }
 
 .gallery__img {
@@ -28,22 +69,64 @@
 }
 
 .block_nav_w {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 6rem;
 }
 
 .block_gallery {
 	display: block;
-	width: 54px;
-	height: 54px;
 	flex-shrink: 0;
 	cursor: pointer;
+	position: relative;
 
-    &--prev {
-        rotate: 180deg;
-    }
+	@media (min-width: $point_2) {
+		width: 5.4rem;
+		height: 5.4rem;
+	}
+
+	@media (min-width: $point_4) and (max-width: $point_3) {
+		width: 4.4rem;
+		height: 4.4rem;
+	}
+
+	@media (max-width: $point_5) {
+		width: 3.4rem;
+		height: 3.4rem;
+	}
+
+	@media (max-width: $point_6) {
+		width: 2.4rem;
+		height: 2.4rem;
+	}
+
+	&--prev {
+		rotate: 180deg;
+
+		@media (min-width: $point_4) and (max-width: $point_3) {
+			left: -4.5rem;
+		}
+
+		@media (max-width: $point_5) {
+			left: -5.5rem;
+		}
+	}
+
+	&--next {
+		@media (min-width: $point_4) and (max-width: $point_3) {
+			right: -4.5rem;
+		}
+
+		@media (max-width: $point_5) {
+			right: -5.5rem;
+		}
+	}
+}
+
+.btn_prev_gallery,
+.btn_next_gallery {
+	@extend %contain_img;
 }
 
 .slider-progress {
@@ -53,12 +136,12 @@
 	width: 80%;
 	height: 4px;
 	background-color: rgba(7, 28, 85, 0.2);
-  }
+}
 
 .slider-progress-bar {
 	position: absolute;
 	height: 100%;
-	width: 15%; 
-	background-color: #6A7799; 
-	transition: transform .3s ease; 
+	width: 15%;
+	background-color: #6a7799;
+	transition: transform 0.3s ease;
 }

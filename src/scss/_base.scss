@@ -1,9 +1,20 @@
 @use './helpers/abstracts' as *;
 
 html {
-	// font-size: calc(100dvw / 1920 * 10);
-
 	font-size: 10px;
+
+	@media (min-width: 1499.98px) and (max-width: 1799.98px) {
+		font-size: 8px;
+	}
+	@media (min-width: 1319.98px) and (max-width: 1499.98px) {
+		font-size: 7px;
+	}
+	@media (min-width: 1149.98px) and (max-width: 1319.98px) {
+		font-size: 6px;
+	}
+	@media (min-width: 1023.98px) and (max-width: 1149.98px) {
+		font-size: 5px;
+	}
 }
 
 html,
@@ -16,6 +27,7 @@ body {
 
 .wrapper {
 	width: 100%;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
@@ -43,9 +55,15 @@ body {
 		background-position: center top;
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 100vh;
-		margin-bottom: -16.9rem;
+		min-height: auto;
 		z-index: 5;
+
+		height: 100dvh;
+
+		@media (max-width: $point_5) {
+			padding: 4rem 0 4rem 0;
+			height: auto;
+		}
 	}
 
 	&.section--form {
@@ -56,10 +74,10 @@ body {
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 41.5rem;
-		margin-bottom: 8rem;
 		z-index: 5;
+		margin-bottom: -30rem;
 	}
-	
+
 	&.section--question {
 		padding: 8rem 0;
 		position: relative;
@@ -89,14 +107,20 @@ body {
 	}
 
 	&.container--footer {
-		padding: 0 7rem;
 		max-width: 192rem;
+
+		@media (min-width: $point_2) {
+			padding: 0 7rem;
+		}
+
+		@media (max-width: $point_3) {
+			padding: 0 7rem;
+		}
 	}
 }
 
 .main_title {
 	font-family: $font_3;
-	font-size: 4.8rem;
 	font-weight: 400;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
@@ -107,8 +131,22 @@ body {
 	&--form {
 		color: $color_white;
 	}
+
+	@media (min-width: $point_4) {
+		font-size: 4.7rem;
+	}
+
+	@include bp($point_5) {
+		font-size: 2.8rem;
+	}
 }
 
 .logo.logo--footer {
 	margin-bottom: 4rem;
+
+	@media (max-width: $point_3) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
